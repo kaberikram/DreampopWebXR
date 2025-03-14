@@ -9,7 +9,7 @@
 	<head>
 		<meta charset="utf-8">
 		<title>Dreampop</title>
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
 		<link rel="icon" type="image/png" href="assets/web.png">
 		<link rel="apple-touch-icon" href="assets/web.png">
 		<!-- Add manifest for PWA support -->
@@ -21,9 +21,31 @@
 				background: #000;
 				overflow: hidden;
 			}
+			canvas { width: 100%; height: 100% }
+			#colorIndicator {
+				position: fixed;
+				bottom: 20px;
+				left: 20px;
+				width: 50px;
+				height: 50px;
+				border-radius: 25px;
+				border: 2px solid white;
+			}
+			#colorName {
+				position: fixed;
+				bottom: 75px;
+				left: 20px;
+				color: white;
+				font-family: Arial, sans-serif;
+				font-size: 16px;
+			}
 		</style>
+		<!-- Vercel Analytics -->
+		<script defer src="/_vercel/insights/script.js"></script>
 	</head>
 	<body>
+		<div id="colorIndicator"></div>
+		<div id="colorName"></div>
 		<script type="module" src="./index.js"></script>
 	</body>
 </html>
