@@ -624,8 +624,7 @@ function onFrame(
 							if (scoreSound.isPlaying) scoreSound.stop();
 							scoreSound.play();
 							
-							// Add some time for each successful hit
-							gameTimer = Math.min(GAME_DURATION, gameTimer + 1); // Add 1 second per hit
+							// Optional: Add a "miss" effect or feedback here
 						} else {
 							// Color mismatch - bullet passes through
 							// Optional: Add a "miss" effect or feedback here
