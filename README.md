@@ -1,4 +1,4 @@
-# Dreampop
+# DreampopWebXR
 
 A WebXR color-matching game built for Meta Quest devices. Match the color of your projectiles with the spheres to score points against the clock!
 
