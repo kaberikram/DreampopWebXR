@@ -8,7 +8,6 @@ A WebXR color-matching game built for Meta Quest devices. Match the color of you
 - 60-second time challenge
 - Score tracking
 - Dynamic sphere respawning
-- Bonus time for successful hits
 - WebXR passthrough AR support
 
 ## Technologies Used
