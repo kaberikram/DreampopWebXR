@@ -1,6 +1,6 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const ESLintPlugin = require('eslint-webpack-plugin');
+// const ESLintPlugin = require('eslint-webpack-plugin');
 const CopyPlugin = require('copy-webpack-plugin');
 
 module.exports = {
@@ -26,11 +26,11 @@ module.exports = {
 		clean: true,
 	},
 	plugins: [
-		new ESLintPlugin({
-			extensions: ['js'],
-			eslintPath: require.resolve('eslint'),
-			overrideConfigFile: path.resolve(__dirname, './eslint.config.cjs'),
-		}),
+		// new ESLintPlugin({
+		// 	extensions: ['js'],
+		// 	eslintPath: require.resolve('eslint'),
+		// 	overrideConfigFile: path.resolve(__dirname, './eslint.config.cjs'),
+		// }),
 		new HtmlWebpackPlugin({
 			template: './src/index.html',
 			title: 'Dreampop',

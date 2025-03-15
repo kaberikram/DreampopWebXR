@@ -5,13 +5,13 @@
  * LICENSE file in the root directory of this source tree.
  */
 
-import { initAnalytics } from './analytics.js';
-import { init } from './init.js';
-import { AXES, XR_BUTTONS } from 'gamepad-wrapper';
-import { gsap } from 'gsap';
 import * as THREE from 'three';
+import { AXES, XR_BUTTONS } from 'gamepad-wrapper';
 import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
 import { Text } from 'troika-three-text';
+import { gsap } from 'gsap';
+import { init } from './init.js';
+import { initAnalytics } from './analytics.js';
 
 // Initialize Vercel Analytics
 initAnalytics();
