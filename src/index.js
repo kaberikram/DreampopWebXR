@@ -6,12 +6,15 @@
  */
 
 import * as THREE from 'three';
-
+import { initAnalytics } from './analytics.js';
 import { AXES, XR_BUTTONS } from 'gamepad-wrapper';
 import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
 import { Text } from 'troika-three-text';
 import { gsap } from 'gsap';
 import { init } from './init.js';
+
+// Initialize Vercel Analytics
+initAnalytics();
 
 const bullets = {};
 const forwardVector = new THREE.Vector3(0, 0, -1);
