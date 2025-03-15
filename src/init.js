@@ -111,7 +111,7 @@ export async function init(setupScene = () => {}, onFrame = () => {}) {
 	};
 
 	// Set output encoding for better rendering in AR
-	renderer.outputEncoding = THREE.sRGBEncoding;
+	renderer.outputColorSpace = THREE.SRGBColorSpace;
 
 	// Use tone mapping for better lighting in AR
 	renderer.toneMapping = THREE.ACESFilmicToneMapping;

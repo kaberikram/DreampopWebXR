@@ -10,8 +10,8 @@ import { gsap } from 'gsap';
 import * as THREE from 'three';
 import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
 import { Text } from 'troika-three-text';
-import { initAnalytics } from './analytics.js';
 import { init } from './init.js';
+import { initAnalytics } from './analytics.js';
 
 // Initialize Vercel Analytics
 initAnalytics();
@@ -318,7 +318,7 @@ function startGame() {
 	console.log("Game started!");
 }
 
-function setupScene({ scene, camera, renderer, _player, controllers }) {
+function setupScene({ scene, camera, renderer, _player, _controllers }) {
 	const gltfLoader = new GLTFLoader();
 
 	// Helper function to traverse model hierarchy
