@@ -5,12 +5,12 @@
  * LICENSE file in the root directory of this source tree.
  */
 
-import * as THREE from 'three';
-import { initAnalytics } from './analytics.js';
 import { AXES, XR_BUTTONS } from 'gamepad-wrapper';
+import { gsap } from 'gsap';
+import * as THREE from 'three';
 import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
 import { Text } from 'troika-three-text';
-import { gsap } from 'gsap';
+import { initAnalytics } from './analytics.js';
 import { init } from './init.js';
 
 // Initialize Vercel Analytics
@@ -318,7 +318,7 @@ function startGame() {
 	console.log("Game started!");
 }
 
-function setupScene({ scene, camera, renderer, player, controllers }) {
+function setupScene({ scene, camera, renderer, _player, controllers }) {
 	const gltfLoader = new GLTFLoader();
 
 	// Helper function to traverse model hierarchy
@@ -428,8 +428,8 @@ function setupScene({ scene, camera, renderer, player, controllers }) {
 
 function onFrame(
 	delta,
-	time,
-	{ scene, camera, renderer, player, controllers },
+	_time,
+	{ scene, _camera, _renderer, _player, controllers },
 ) {
 	// Update the timer if game is active
 	if (gameState === GAME_STATE.PLAYING) {
